@@ -14,20 +14,6 @@ CREATE TABLE "profiles" (
     "contact_info" VARCHAR(60) NOT NULL
 );
 
-CREATE TABLE "resources" (
-    "id" SERIAL PRIMARY KEY,
-    "biz_name" VARCHAR (200),
-	"biz_url" VARCHAR (2083),
-    "contact_name" VARCHAR (300),
-    "address" VARCHAR (500),
-	"gender" VARCHAR (20),
-	"race" VARCHAR (20),
-	"language" VARCHAR (100),
-	"image_url" VARCHAR (2083),
-	"biz_notes" VARCHAR (2083),
-	"resource_type" INT NOT NULL REFERENCES resource_type,
-);
-
 CREATE TABLE "resource_type" (
     "id" SERIAL PRIMARY KEY,
     "type" varchar(20),
@@ -41,15 +27,16 @@ CREATE TABLE "locations"(
     "lng" DECIMAL (9,6)
 );
 
-CREATE TABLE "job_tracker"(
+CREATE TABLE "resources"(
 	"id" SERIAL PRIMARY KEY,
 	"location_id" INT NOT NULL REFERENCES locations,
 	"user_id" INT NOT NULL REFERENCES users,
-	"biz_name" INT NOT NULL REFERENCES resources,
-	"biz_url" INT NOT NULL REFERENCES resources,
-	"resource_type" INT NOT NULL REFERENCES resource_type,
-	"company_name" INT NOT NULL REFERENCES resources,
-	"contact_name" INT NOT NULL REFERENCES resources,
-	"biz_url" INT NOT NULL REFERENCES resources,
-	"biz_notes" INT NOT NULL REFERENCES resources
+	"biz_name" VARCHAR (200) NOT NULL,
+	"biz_url" VARCHAR (2083),
+    "contact_name" VARCHAR (300),
+    "contact_gender" VARCHAR (20),
+    "contact_race" VARCHAR (20),
+    "contact_languages" VARCHAR (100),
+	"biz_notes" VARCHAR (2083),
+    "resource_type" INT NOT NULL REFERENCES resource_type
 );
