@@ -25,7 +25,7 @@ router.get('/', (req, res) => {
 
 router.get('/user', (req, res) => {
     console.log('admin /user GET', req.query);
-    const users = req.query.person;
+    const users = req.query.user;
     console.log('GETting all users', person);
     let queryText = `SELECT * FROM "person";`;
     pool.query(queryText).then((result) => {
