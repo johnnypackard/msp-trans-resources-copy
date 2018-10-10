@@ -1,7 +1,13 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 import { Button, Form, Grid, Header, Segment } from 'semantic-ui-react';
+
+const mapStateToProps = state => ({
+  user: state.user,
+  login: state.login,
+});
 
 class RegisterPage extends Component {
   constructor(props) {
@@ -27,7 +33,7 @@ class RegisterPage extends Component {
       };
 
       // making the request to the server to post the new user's registration
-      axios.post('/api/user/register/', body)
+      axios.post('/api/users/register/', body)
         .then((response) => {
           if (response.status === 201) {
             this.props.history.push('/home');
@@ -130,43 +136,10 @@ class RegisterPage extends Component {
             </Form>
           </Grid.Column>
         </Grid>
-        {/* <form onSubmit={this.registerUser}>
-          <h1>Register User</h1>
-          <div>
-            <label htmlFor="username">
-              Username:
-              <input
-                type="text"
-                name="username"
-                value={this.state.username}
-                onChange={this.handleInputChangeFor('username')}
-              />
-            </label>
-          </div>
-          <div>
-            <label htmlFor="password">
-              Password:
-              <input
-                type="password"
-                name="password"
-                value={this.state.password}
-                onChange={this.handleInputChangeFor('password')}
-              />
-            </label>
-          </div>
-          <div>
-            <input
-              type="submit"
-              name="submit"
-              value="Register"
-            />
-            <Link to="/home">Cancel</Link>
-          </div>
-        </form> */}
       </div>
     );
   }
 }
 
-export default RegisterPage;
+export default connect(mapStateToProps)(RegisterPage);
 
