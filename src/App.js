@@ -9,7 +9,6 @@ import './styles/App.css';
 
 import LoginPage from './components/LoginPage/LoginPage';
 import RegisterPage from './components/RegisterPage/RegisterPage';
-import UserPage from './components/UserPage/UserPage';
 import InfoPage from './components/InfoPage/InfoPage';
 import HomepageHeading from './components/Homepage/Homepage';
 import ResourcesPage from './components/ResourcesPage/ResourcesPage';
@@ -35,10 +34,6 @@ const App = () => (
                 <Route
                   path="/register"
                   component={RegisterPage}
-                />
-                <Route
-                  path="/home"
-                  component={UserPage}
                 />
                 <Route
                   path="/info"

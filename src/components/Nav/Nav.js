@@ -31,16 +31,16 @@ class Nav extends Component {
               </Menu.Item>
 
               <Menu.Item>
-                <Button as={Link} name='Home' to='/home' primary>
+                <Button as={Link} name='Home' to='/homepage' primary>
                   Home
                 </Button>
               </Menu.Item>
 
-              <Menu.Item>
+              {/* <Menu.Item>
                 <Button as={Link} name='About' to='/about' primary>
                   About
                 </Button>
-              </Menu.Item>
+              </Menu.Item> */}
 
               <Menu.Item>
                 <Button as={Link} name='Resources' to='/resources' primary>
@@ -58,13 +58,14 @@ class Nav extends Component {
             
             <Menu.Menu position='right'>
 
-              <Dropdown item text='Profile'>
+
+            {/* <Dropdown item text='Profile'>
                 <Dropdown.Menu>
                   <Dropdown.Item icon='user' text='View Profile' />
                   <Dropdown.Item icon='edit' text='Edit Profile' />
                   <Dropdown.Item icon='settings' text='Account Settings' />
                 </Dropdown.Menu>
-              </Dropdown>
+              </Dropdown> */}
 
               <Menu.Item>
                 <Button negative name='logout' onClick={this.logout}>

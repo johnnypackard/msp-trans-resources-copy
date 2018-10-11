@@ -86,7 +86,7 @@ class DesktopContainer extends Component {
                                 <Menu.Item as={Link} to='/homepage' active>
                                     Home
                                 </Menu.Item>
-                                <Menu.Item as={Link} to='/info'>About</Menu.Item>
+                                {/* <Menu.Item as={Link} to='/info'>About</Menu.Item> */}
                                 <Menu.Item as={Link} to='/volunteer'>Volunteer</Menu.Item>
                                 <Menu.Item position='right'>
                                     <Button as={Link} to='/login' inverted={!fixed}>
@@ -335,13 +335,13 @@ const HomepageLayout = () => (
             <Container>
                 <Grid divided inverted stackable>
                     <Grid.Row>
-                        <Grid.Column width={3}>
+                        {/* <Grid.Column width={3}>
                             <Header inverted as='h4' content='About' />
                             <List link inverted>
                                 <List.Item as='a'>Who we are</List.Item>
                                 <List.Item as='a'>Contact Us</List.Item>
                             </List>
-                        </Grid.Column>
+                        </Grid.Column> */}
                         <Grid.Column>
                             <Header inverted as='h4' content='Additional Info' />
                             <List link inverted>

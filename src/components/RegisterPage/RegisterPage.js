@@ -115,7 +115,7 @@ class RegisterPage extends Component {
                     name='submit'
                     value='Register'
                     onSubmit={this.registerUser}
-                    as={Link} to='/home'
+                    as={Link} to='/resources'
                   >
                   Register
                   </Button>

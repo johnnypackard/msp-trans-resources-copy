@@ -8,11 +8,11 @@ const Footer = () => (
                 <Grid divided inverted stackable>
                     <Grid.Row>
                         <Grid.Column width={3}>
-                            <Header inverted as='h4' content='About' />
+                            {/* <Header inverted as='h4' content='About' />
                             <List link inverted>
                                 <List.Item as='a'>Who we are</List.Item>
                                 <List.Item as='a'>Contact Us</List.Item>
-                            </List>
+                            </List> */}
                         </Grid.Column>
                         <Grid.Column>
                             <Header inverted as='h4' content='Additional Info' />
