@@ -1,7 +1,7 @@
-// export const RESOURCES_ACTIONS = {
-//     FETCH: 'FETCH_RESOURCES',
-//   };
-  
-//   export function fetchResources() {
-//     return { type: RESOURCES_ACTIONS.FETCH };
-//   }
+export const RESOURCE_ACTIONS = {
+    FETCH_RESOURCES: 'FETCH_RESOURCES',
+    SHOW_RESOURCES: 'SHOW_RESOURCES',
+    POST_RESOURCES: 'POST_RESOURCES',
+    UPDATE_RESOURCES: 'UPDATE_RESOURCES',
+    DELETE_RESOURCES: 'DELETE_RESOURCES'
+}

@@ -1,14 +1,17 @@
-// import { combineReducers } from 'redux';
+import { combineReducers } from 'redux';
 
-// const businesses = (state = [], action) => {
-//     switch (action.type) {
-//         case 'UPDATE_BUSINESSES':
-//             return [...action.payload]
-//         default:
-//             return state;
-//     }
-// };
+const businesses = (state = [], action) => {
+    switch (action.type) {
+        case BUSINESSES_ACTIONS.SHOW_BUSINESSES:
+            return action.payload
+        case BUSINESSES_ACTIONS.POST_BUSINESSES:
+            return [action.payload]
+        case BUSINESSES_ACTIONS.DELETE_BUSINESS:
+            return [action.payload]
+        
+    }
+};
 
-// export default combineReducers({
-//     businesses,
-// });
+export default combineReducers({
+    businesses,
+});
